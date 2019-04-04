@@ -1,18 +1,12 @@
-import easygui as gui
+
 import serial as ser
+import tkinter as tk
 import sys
 import os
-if gui.ccbox("open serial","yes","no"):
-    gui.msgbox("serial opened","attention","OK")
-    baud=gui.choicebox("please set baudrate","baudrate",("115200","9600","4800"))
-    ser.baudrate=baud
-    ser.port='COM3'
-    print(baud)
-    
-    
-else: 
-    gui.msgbox("exit","attention","OK")
-    
-
+root=tk.Tk()
+root.title("Demo")
+mylabel=tk.Label(root,text="this is text")
+mylabel.pack()
+root.mainloop()
 print("done")
 
